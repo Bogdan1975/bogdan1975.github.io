@@ -1,0 +1,281 @@
+<div class="variant-block">
+    <div class="variant-header">
+        Plain slider
+    </div>
+    <ng2-slider min="1"
+                max="14"
+                value="5"
+                (onRangeChanged)="plainValueChanged($event, plain_1)"
+    >
+    </ng2-slider>
+    <p class="value-box">
+        Value: <span class="value-span" #plain_1>5</span>
+    </p>
+
+    <tabset>
+        <tab title="HTML">
+            <pre><code>
+                <![CDATA[
+<div class="variant-header">
+    Plain slider
+</div>
+<ng2-slider min="1"
+            max="14"
+            value="5"
+            (onRangeChanged)="plainValueChanged($event, plain_1)"
+>
+</ng2-slider>
+<p class="value-box">
+    Value: <span class="value-span" #plain_1>5</span>
+</p>
+                ]]>
+            </code></pre>        </tab>
+        <tab title="TS">
+            <pre><code>
+            <![CDATA[
+plainValueChanged(event, container:any) {
+    var el = this.getElement(container);
+    el.innerText = event.startValue;
+}
+
+getElement(data){
+    if (typeof(data)=='string') {
+        return document.getElementById(data);
+    }
+    if (typeof(data)=='object' && data instanceof Element) {
+        return data;
+    }
+    return null;
+}
+                ]]>
+            </code></pre>
+        </tab>
+    </tabset>
+
+</div>
+<div class="variant-block">
+    <div class="variant-header">
+        Range slider
+    </div>
+    <ng2-slider
+            #range
+            min="6"
+            max="23"
+            startValue="9"
+            endValue="21"
+            (onRangeChanged)="rangeValueChanged($event, 'range-1-start', range_1_end)"
+    >
+    </ng2-slider>
+    <p class="value-box">
+        Values: <span class="value-span" id="range-1-start">9</span> - <span class="value-span" #range_1_end>21</span>
+    </p>
+
+    <tabset>
+        <tab title="HTML">
+            <pre><code>
+                <![CDATA[
+<div class="variant-header">
+    Range slider
+</div>
+<ng2-slider
+        #range
+        min="6"
+        max="23"
+        startValue="9"
+        endValue="21"
+        (onRangeChanged)="rangeValueChanged($event, 'range-1-start', range_1_end)"
+>
+</ng2-slider>
+<p class="value-box">
+    Values: <span class="value-span" id="range-1-start">9</span> - <span class="value-span" #range_1_end>21</span>
+</p>
+                ]]>
+            </code></pre>
+        </tab>
+        <tab title="TS">
+            <pre><code>
+                <![CDATA[
+rangeValueChanged(event, start:any, end:any) {
+    var start_el = this.getElement(start);
+    var end_el = this.getElement(end);
+    start_el.innerText = event.startValue;
+    end_el.innerText = event.endValue;
+}
+
+getElement(data){
+    if (typeof(data)=='string') {
+        return document.getElementById(data);
+    }
+    if (typeof(data)=='object' && data instanceof Element) {
+        return data;
+    }
+    return null;
+}
+                ]]>
+            </code></pre>
+        </tab>
+    </tabset>
+
+</div>
+<div class="variant-block">
+    <div class="variant-header">
+        Slider with step
+    </div>
+    <ng2-slider min="10"
+                max="100"
+                value="25"
+                stepValue="5"
+                (onRangeChanged)="plainValueChanged($event, plain_2)"
+    >
+    </ng2-slider>
+    <p class="value-box">
+        Value: <span class="value-span" #plain_2>25</span>
+    </p>
+
+    <tabset>
+        <tab title="HTML">
+            <pre><code>
+                <![CDATA[
+<div class="variant-header">
+    Slider with step
+</div>
+<ng2-slider min="10"
+            max="100"
+            value="25"
+            stepValue="5"
+            (onRangeChanged)="plainValueChanged($event, plain_2)"
+>
+</ng2-slider>
+<p class="value-box">
+    Value: <span class="value-span" #plain_2>25</span>
+</p>
+                ]]>
+            </code></pre>
+        </tab>
+        <tab title="TS">
+            <pre><code>
+                <![CDATA[
+plainValueChanged(event, container:any) {
+    var el = this.getElement(container);
+    el.innerText = event.startValue;
+}
+
+getElement(data){
+    if (typeof(data)=='string') {
+        return document.getElementById(data);
+    }
+    if (typeof(data)=='object' && data instanceof Element) {
+        return data;
+    }
+    return null;
+}
+                ]]>
+            </code></pre>
+        </tab>
+    </tabset>
+
+</div>
+<div class="variant-block">
+    <div class="variant-header">
+        Slider styling
+    </div>
+    <ng2-slider
+            #range
+            min="0"
+            max="150"
+            startValue="0"
+            endValue="150"
+            stepValue="5"
+            [rangeRibbonStyle] = "{
+                    'height': '2px',
+                    'border': 'none',
+                    'top': '12px',
+                    'background': 'orange'
+            }"
+            [normalHandlerStyle]="{
+                    'width': '24px',
+                    'height': '24px',
+                    'border-radius': '12px',
+                    'background': 'red',
+                    'border': 'solid 8px blue'
+            }"
+            [slidingHandlerStyle]="{
+                    'border': 'none',
+                    'width': '2px',
+                    'height': '26px',
+                    'background-color': 'red'
+                }"
+            (onRangeChanged)="rangeValueChanged($event, range_2_start, range_2_end)"
+    >
+    </ng2-slider>
+    <p class="value-box">
+        Values: <span class="value-span" #range_2_start>0</span> - <span class="value-span" #range_2_end>150</span>
+    </p>
+
+    <tabset>
+        <tab title="HTML">
+            <pre><code>
+                <![CDATA[
+<div class="variant-header">
+    Slider styling
+</div>
+<ng2-slider
+        #range
+        min="0"
+        max="150"
+        startValue="0"
+        endValue="150"
+        stepValue="5"
+        [rangeRibbonStyle] = "{
+                'height': '2px',
+                'border': 'none',
+                'top': '12px',
+                'background': 'orange'
+        }"
+        [normalHandlerStyle]="{
+                'width': '24px',
+                'height': '24px',
+                'border-radius': '12px',
+                'background': 'red',
+                'border': 'solid 8px blue'
+        }"
+       [slidingHandlerStyle]="{
+            'border': 'none',
+            'width': '2px',
+            'height': '26px',
+            'background-color': 'red'
+        }"
+        (onRangeChanged)="rangeValueChanged($event, range_2_start, range_2_end)"
+>
+</ng2-slider>
+<p class="value-box">
+    Values: <span class="value-span" #range_2_start>0</span> - <span class="value-span" #range_2_end>150</span>
+</p>
+                ]]>
+            </code></pre>
+        </tab>
+        <tab title="TS">
+            <pre><code>
+                <![CDATA[
+rangeValueChanged(event, start:any, end:any) {
+    var start_el = this.getElement(start);
+    var end_el = this.getElement(end);
+    start_el.innerText = event.startValue;
+    end_el.innerText = event.endValue;
+}
+
+getElement(data){
+    if (typeof(data)=='string') {
+        return document.getElementById(data);
+    }
+    if (typeof(data)=='object' && data instanceof Element) {
+        return data;
+    }
+    return null;
+}
+                ]]>
+            </code></pre>
+        </tab>
+    </tabset>
+
+</div>

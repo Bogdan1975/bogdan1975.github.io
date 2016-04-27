@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular 2 slider component examples</title>
+    <script src="https://code.angularjs.org/2.0.0-beta.15/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <!--<script src="https://npmcdn.com/typescript@1.8.2/lib/typescript.js"></script>-->
+    <script src="https://code.angularjs.org/2.0.0-beta.15/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.15/angular2.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.15/upgrade.dev.js"></script>
+<!--    <script src="https://npmcdn.com/ng2-tabs@0.0.2/src/ng2-tabs.ts"></script>-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+
+    <script>
+        hljs.initHighlightingOnLoad();
+
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                },
+                "node_modules": {
+                    format: 'register',
+                    defaultExtension: 'js'
+                },
+                "angular2-tabs": {
+                    format: 'register',
+                    defaultExtension: 'js'
+                },
+                "slider": {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            },
+            map: {
+                'ng2-slideable-directive': './../node_modules/ng2-slideable-directive',
+                'ng2-slider-component': './../node_modules/ng2-slider-component',
+                'ng2-tabs': 'node_modules/ng2-tabs'
+            }
+        });
+        System.import('app/main')
+                .then(null, console.error.bind(console));
+    </script>
+    <style>
+        body, header, h1 {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        header {
+            background: #0a69c0;
+            color: #fff;
+            margin: -25px;
+            margin-bottom: 40px;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: 48px;
+        }
+
+        .ui-slider.ui-slider-horizontal {
+            height: 26px;
+            margin-top: 7px;
+        }
+        .slider-input-block {
+            width: 150px;
+            display: inline-block;
+        }
+
+        app {
+            width: 50%;
+            display: block;
+        }
+        #app-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .variant-block {
+            clear: both;
+            float: none;
+            border-bottom: solid 5px #999;
+            padding: 15px 0;
+        }
+        .variant-block:last-child {
+            border: none;
+        }
+        .variant-header {
+            font-size: 26px;
+            padding-bottom: 15px;
+        }
+
+        .tabset-content {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Angular 2 Slider</h1>
+        <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+    </header>
+    <div id="app-container">
+        <app></app>
+    </div>
+</body>
+</html>
