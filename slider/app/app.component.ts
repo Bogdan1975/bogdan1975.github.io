@@ -1,8 +1,5 @@
 /**
- * Created by User on 29.03.2016.
- */
-/**
- * Created by User on 24.02.2016.
+ * Created by Bogdan1975 on 29.03.2016.
  */
 import {Component, Directive, View, Inject, ElementRef, Query, Dependency, QueryList} from 'angular2/core';
 
