@@ -1,12 +1,11 @@
 <div class="variant-block">
     <div class="variant-header">
-        Plain slider
+        <h2>Plain slider</h2>
     </div>
     <ng2-slider min="1"
                 max="14"
                 value="5"
-                (onRangeChanged)="plainValueChanged($event, plain_1)"
-    >
+                (onRangeChanged)="plainValueChanged($event, plain_1)">
     </ng2-slider>
     <p class="value-box">
         Value: <span class="value-span" #plain_1>5</span>
@@ -14,26 +13,17 @@
 
     <tabset>
         <tab title="HTML">
-            <pre><code>
-                <![CDATA[
-<div class="variant-header">
-    Plain slider
-</div>
-<ng2-slider min="1"
+            <show-code [skinDirectory]="showCodeSkinDirectory"><![CDATA[<ng2-slider min="1"
             max="14"
             value="5"
-            (onRangeChanged)="plainValueChanged($event, plain_1)"
->
-</ng2-slider>
+            (onRangeChanged)="plainValueChanged($event, plain_1)">
+</ng2-slider>]]>
 <p class="value-box">
     Value: <span class="value-span" #plain_1>5</span>
-</p>
-                ]]>
-            </code></pre>        </tab>
-        <tab title="TS">
-            <pre><code>
-            <![CDATA[
-plainValueChanged(event, container:any) {
+</p></show-code>
+        </tab>
+        <tab title="TypeScript">
+            <show-code language="typescript" [skinDirectory]="showCodeSkinDirectory">plainValueChanged(event, container:any) {
     var el = this.getElement(container);
     el.innerText = event.startValue;
 }
@@ -46,16 +36,14 @@ getElement(data){
         return data;
     }
     return null;
-}
-                ]]>
-            </code></pre>
+}</show-code>
         </tab>
     </tabset>
 
 </div>
 <div class="variant-block">
     <div class="variant-header">
-        Range slider
+        <h2>Range slider</h2>
     </div>
     <ng2-slider
             #range
@@ -63,39 +51,28 @@ getElement(data){
             max="23"
             startValue="9"
             endValue="21"
-            (onRangeChanged)="rangeValueChanged($event, 'range-1-start', range_1_end)"
-    >
+            (onRangeChanged)="rangeValueChanged($event, 'range-1-start', range_1_end)">
     </ng2-slider>
     <p class="value-box">
         Values: <span class="value-span" id="range-1-start">9</span> - <span class="value-span" #range_1_end>21</span>
     </p>
 
     <tabset>
-        <tab title="HTML">
-            <pre><code>
-                <![CDATA[
-<div class="variant-header">
-    Range slider
-</div>
+        <tab title="HTML"><show-code [skinDirectory]="showCodeSkinDirectory"><![CDATA[
 <ng2-slider
         #range
         min="6"
         max="23"
         startValue="9"
         endValue="21"
-        (onRangeChanged)="rangeValueChanged($event, 'range-1-start', range_1_end)"
->
-</ng2-slider>
+        (onRangeChanged)="rangeValueChanged($event, 'range-1-start', range_1_end)">
+</ng2-slider>]]>
 <p class="value-box">
     Values: <span class="value-span" id="range-1-start">9</span> - <span class="value-span" #range_1_end>21</span>
-</p>
-                ]]>
-            </code></pre>
+</p></show-code>
         </tab>
-        <tab title="TS">
-            <pre><code>
-                <![CDATA[
-rangeValueChanged(event, start:any, end:any) {
+        <tab title="TypeScript">
+            <show-code language="typescript" [skinDirectory]="showCodeSkinDirectory">rangeValueChanged(event, start:any, end:any) {
     var start_el = this.getElement(start);
     var end_el = this.getElement(end);
     start_el.innerText = event.startValue;
@@ -110,23 +87,20 @@ getElement(data){
         return data;
     }
     return null;
-}
-                ]]>
-            </code></pre>
+}</show-code>
         </tab>
     </tabset>
 
 </div>
 <div class="variant-block">
     <div class="variant-header">
-        Slider with step
+        <h2>Slider with step</h2>
     </div>
     <ng2-slider min="10"
                 max="100"
                 value="25"
                 stepValue="5"
-                (onRangeChanged)="plainValueChanged($event, plain_2)"
-    >
+                (onRangeChanged)="plainValueChanged($event, plain_2)">
     </ng2-slider>
     <p class="value-box">
         Value: <span class="value-span" #plain_2>25</span>
@@ -134,28 +108,19 @@ getElement(data){
 
     <tabset>
         <tab title="HTML">
-            <pre><code>
-                <![CDATA[
-<div class="variant-header">
-    Slider with step
-</div>
+            <show-code [skinDirectory]="showCodeSkinDirectory"><![CDATA[
 <ng2-slider min="10"
             max="100"
             value="25"
             stepValue="5"
-            (onRangeChanged)="plainValueChanged($event, plain_2)"
->
-</ng2-slider>
+            (onRangeChanged)="plainValueChanged($event, plain_2)">
+</ng2-slider>]]>
 <p class="value-box">
     Value: <span class="value-span" #plain_2>25</span>
-</p>
-                ]]>
-            </code></pre>
+</p></show-code>
         </tab>
-        <tab title="TS">
-            <pre><code>
-                <![CDATA[
-plainValueChanged(event, container:any) {
+        <tab title="TypeScript">
+            <show-code language="typescript" [skinDirectory]="showCodeSkinDirectory">plainValueChanged(event, container:any) {
     var el = this.getElement(container);
     el.innerText = event.startValue;
 }
@@ -168,16 +133,18 @@ getElement(data){
         return data;
     }
     return null;
-}
-                ]]>
-            </code></pre>
+}</show-code>
         </tab>
     </tabset>
 
 </div>
 <div class="variant-block">
-    <div class="variant-header">
-        Slider styling
+    <div class="variant-header" >
+        <h2>Slider styling using <i>"rangeRibbonStyle"</i>, <i>"rangeRibbonStyle"</i> and <i>"rangeRibbonStyle"</i> attributes. <b>DEPRECATED.</b></h2>
+    </div>
+    <div class="block-description">
+        <p>This styling method is deprecated, but will remain few next versions for backward compatibility.</p>
+        <p>Better way is <a href="#styleBlockStyledDirective">using "styled" directive</a>, see example lower.</p>
     </div>
     <ng2-slider
             #range
@@ -205,8 +172,7 @@ getElement(data){
                     'height': '26px',
                     'background-color': 'red'
                 }"
-            (onRangeChanged)="rangeValueChanged($event, range_2_start, range_2_end)"
-    >
+            (onRangeChanged)="rangeValueChanged($event, range_2_start, range_2_end)">
     </ng2-slider>
     <p class="value-box">
         Values: <span class="value-span" #range_2_start>0</span> - <span class="value-span" #range_2_end>150</span>
@@ -214,11 +180,7 @@ getElement(data){
 
     <tabset>
         <tab title="HTML">
-            <pre><code>
-                <![CDATA[
-<div class="variant-header">
-    Slider styling
-</div>
+            <show-code [skinDirectory]="showCodeSkinDirectory"><![CDATA[
 <ng2-slider
         #range
         min="0"
@@ -232,32 +194,27 @@ getElement(data){
                 'top': '12px',
                 'background': 'orange'
         }"
-        [normalHandlerStyle]="{
+        [normalHandlerStyle] = "{
                 'width': '24px',
                 'height': '24px',
                 'border-radius': '12px',
                 'background': 'red',
                 'border': 'solid 8px blue'
         }"
-       [slidingHandlerStyle]="{
+       [slidingHandlerStyle] = "{
             'border': 'none',
             'width': '2px',
             'height': '26px',
             'background-color': 'red'
         }"
-        (onRangeChanged)="rangeValueChanged($event, range_2_start, range_2_end)"
->
-</ng2-slider>
+        (onRangeChanged)="rangeValueChanged($event, range_2_start, range_2_end)">
+</ng2-slider>]]>
 <p class="value-box">
     Values: <span class="value-span" #range_2_start>0</span> - <span class="value-span" #range_2_end>150</span>
-</p>
-                ]]>
-            </code></pre>
+</p></show-code>
         </tab>
-        <tab title="TS">
-            <pre><code>
-                <![CDATA[
-rangeValueChanged(event, start:any, end:any) {
+        <tab title="TypeScript">
+            <show-code language="typescript" [skinDirectory]="showCodeSkinDirectory">rangeValueChanged(event, start:any, end:any) {
     var start_el = this.getElement(start);
     var end_el = this.getElement(end);
     start_el.innerText = event.startValue;
@@ -272,10 +229,146 @@ getElement(data){
         return data;
     }
     return null;
-}
-                ]]>
-            </code></pre>
+}</show-code>
         </tab>
     </tabset>
+
+</div>
+<div class="variant-block">
+    <div class="variant-header" id="styleBlockStyledDirective">
+        <h2>Slider styling using <a href="https://github.com/Bogdan1975/ng2-styled-directive"><b>"styled" directive</b></a>.</h2>
+    </div>
+    <div class="block-description">
+        <p>Now right way to styling slider component is using "styled" directive. Below is example with using "styleBlock" attribute of "styled" directive.</p>
+        <p>The styles defined by "styleBlock" will overwrite styles defined by skin ("default" in case of 'skin' attribute not setted). If you don't want to have skins style, you must set "skin" to "none" value.</p>
+    </div>
+    <ng2-slider
+            styled
+            [styleBlock] = "[
+            '.range-ribbon {left: 0%; width: 100%; height: 4px; border: solid 1px; position: absolute; top: 7px;}',
+            '.slider-handle {width: 8px; height: 18px; border: solid 1px black; position: absolute; background-color: orange;}',
+            '.slider-handle.sliding {width: 2px; border: none; background-color: red;}'
+            ]"
+            min="0"
+            max="150"
+            startValue="0"
+            endValue="150"
+            (onRangeChanged)="rangeValueChanged($event, range_3_start, range_3_end)">
+    </ng2-slider>
+    <p class="value-box">
+        Values: <span class="value-span" #range_3_start>0</span> - <span class="value-span" #range_3_end>150</span>
+    </p>
+
+    <tabset>
+        <tab title="HTML">
+            <show-code [skinDirectory]="showCodeSkinDirectory"><![CDATA[<ng2-slider
+        styled
+        [styleBlock] = "[
+            '.range-ribbon {left: 0%; width: 100%; height: 4px; border: solid 1px; position: absolute; top: 7px;}',
+            '.slider-handle {width: 8px; height: 18px; border: solid 1px black; position: absolute; background-color: orange;}',
+            '.slider-handle.sliding {width: 2px; border: none; background-color: red;}'
+        ]"
+        min="0"
+        max="150"
+        startValue="0"
+        endValue="150"
+        (onRangeChanged)="rangeValueChanged($event, range_3_start, range_3_end)">
+</ng2-slider>]]>
+<p class="value-box">
+    Values: <span class="value-span" #range_2_start>0</span> - <span class="value-span" #range_2_end>150</span>
+</p></show-code>
+        </tab>
+        <tab title="TypeScript">
+            <show-code language="typescript" [skinDirectory]="showCodeSkinDirectory">rangeValueChanged(event, start:any, end:any) {
+    var start_el = this.getElement(start);
+    var end_el = this.getElement(end);
+    start_el.innerText = event.startValue;
+    end_el.innerText = event.endValue;
+}
+
+getElement(data){
+    if (typeof(data)=='string') {
+        return document.getElementById(data);
+    }
+    if (typeof(data)=='object' && data instanceof Element) {
+        return data;
+    }
+    return null;
+}</show-code>
+        </tab>
+    </tabset>
+
+</div>
+<div class="variant-block">
+    <div class="variant-header">
+        <h2>Slider styling using embeded skins.</h2>
+    </div>
+    <div class="block-description">
+        <p>The easiest way to styling slider component is using embeded skins. In this version (1.0.2) component have skins: "default", "simple-1", "elegance-1", "elegance-2", "rear-sight"</p>
+        <p>"skin" attribute processed by "styled" directive, but applying of this directive is not required - if "skin" is setted, "styled" will be applied automaticaly</p>
+    </div>
+
+    <h3>"default"</h3>
+    <ng2-slider
+            min="0"
+            max="150">
+    </ng2-slider>
+
+<show-code [skinDirectory]="showCodeSkinDirectory"><![CDATA[<ng2-slider
+        min="0"
+        max="150">
+</ng2-slider>]]></show-code>
+
+    <h3>"simple-1"</h3>
+    <ng2-slider
+            skin="simple-1"
+            min="0"
+            max="150">
+    </ng2-slider>
+
+    <show-code [skinDirectory]="showCodeSkinDirectory"><![CDATA[<ng2-slider
+        skin="simple-1"
+        min="0"
+        max="150">
+</ng2-slider>]]></show-code>
+
+    <h3>"elegance-1"</h3>
+    <ng2-slider
+            skin="elegance-1"
+            min="0"
+            max="150">
+    </ng2-slider>
+
+    <show-code [skinDirectory]="showCodeSkinDirectory"><![CDATA[<ng2-slider
+        skin="elegance-1"
+        min="0"
+        max="150">
+</ng2-slider>]]></show-code>
+
+    <h3>"elegance-2"</h3>
+    <ng2-slider
+            skin="elegance-2"
+            min="0"
+            max="150">
+    </ng2-slider>
+
+    <show-code [skinDirectory]="showCodeSkinDirectory"><![CDATA[<ng2-slider
+        skin="elegance-2"
+        min="0"
+        max="150">
+</ng2-slider>]]></show-code>
+
+    <h3>"rear-sight"</h3>
+    <ng2-slider
+            skin="rear-sight"
+            min="0"
+            max="150">
+    </ng2-slider>
+
+    <show-code [skinDirectory]="showCodeSkinDirectory"><![CDATA[<ng2-slider
+        skin="rear-sight"
+        min="0"
+        max="150">
+</ng2-slider>]]></show-code>
 
 </div>

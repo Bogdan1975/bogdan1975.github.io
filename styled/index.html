@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>Angular 2 slider component examples</title>
     <script src="https://code.angularjs.org/2.0.0-beta.17/angular2-polyfills.js"></script>
-    <!--<script src="https://code.angularjs.org/tools/system.js"></script>-->
-    <script src="../node_modules/systemjs/dist/system.js"></script>
+    <script src="https://code.angularjs.org/tools/system.js"></script>
     <!--<script src="https://npmcdn.com/typescript@1.8.2/lib/typescript.js"></script>-->
     <script src="https://code.angularjs.org/2.0.0-beta.17/Rx.js"></script>
     <script src="https://code.angularjs.org/2.0.0-beta.17/angular2.dev.js"></script>
@@ -14,19 +13,13 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/typescript.min.js"></script>-->
-    <script src="../node_modules/highlightjs/highlight.pack.js"></script>
 
     <script>
-//        hljs.initHighlightingOnLoad();
+        hljs.initHighlightingOnLoad();
 
         System.config({
-//            defaultJSExtensions: true,
-/*            meta: {
-                '../../node_modules/!*': { format: 'global' }
-            },*/
             packages: {
                 app: {
                     format: 'register',
@@ -36,18 +29,6 @@
                     format: 'register',
                     defaultExtension: 'js'
                 },
-                'ng2-slider-component': {
-                    format: 'register',
-                    defaultExtension: 'js'
-                },
-/*                'node_modules/ng2-slider-component': {
-                    format: 'register',
-                    defaultExtension: 'js'
-                },
-                '../../node_modules/ng2-slider-component': {
-                    format: 'register',
-                    defaultExtension: 'js'
-                },*/
                 "angular2-tabs": {
                     format: 'register',
                     defaultExtension: 'js'
@@ -58,13 +39,9 @@
                 }
             },
             map: {
-                'node_modules': '../node_modules',
-                'ng2-slideable-directive': './../node_modules/ng2-slideable-directive',
-                'ng2-styled-directive': './../node_modules/ng2-styled-directive',
+                'ng2-slideable-directive': 'node_modules/ng2-slideable-directive',
                 'ng2-slider-component': './../node_modules/ng2-slider-component',
-                'ng2-show-code': './../node_modules/ng2-show-code',
-//                'angular2': '../..',
-                'ng2-tabs': './../node_modules/ng2-tabs'
+                'ng2-tabs': 'node_modules/ng2-tabs'
             }
         });
         System.import('app/main')
@@ -117,12 +94,9 @@
         .variant-block:last-child {
             border: none;
         }
-        .variant-header h2 {
+        .variant-header {
             font-size: 26px;
             padding-bottom: 15px;
-        }
-        .block-description {
-            font-size: 17px;
         }
 
         .tabset-content {
@@ -132,8 +106,8 @@
 </head>
 <body>
     <header>
-        <h1>Angular 2 Slider</h1>
-        <a href="https://github.com/Bogdan1975/ng2-slider-component"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+        <h1>Angular 2 "styled" directive</h1>
+        <a href="https://github.com/Bogdan1975/ng2-styled-directive"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
     </header>
     <div id="app-container">
         <app></app>
