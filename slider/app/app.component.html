@@ -144,7 +144,7 @@ getElement(data){
     </div>
     <div class="block-description">
         <p>This styling method is deprecated, but will remain few next versions for backward compatibility.</p>
-        <p>Better way is <a href="#styleBlockStyledDirective">using "styled" directive</a>, see example lower.</p>
+        <p>Better way is using "styled" directive by <a href="#styleBlockStyledDirective">"styleBlock" attribute</a> or <a href="#skinStyledDirective">"skin" attribute</a>, see example lower.</p>
     </div>
     <ng2-slider
             #range
@@ -299,7 +299,7 @@ getElement(data){
     </tabset>
 
 </div>
-<div class="variant-block">
+<div class="variant-block" id="skinStyledDirective">
     <div class="variant-header">
         <h2>Slider styling using embeded skins.</h2>
     </div>
@@ -308,7 +308,7 @@ getElement(data){
         <p>"skin" attribute processed by "styled" directive, but applying of this directive is not required - if "skin" is setted, "styled" will be applied automaticaly</p>
     </div>
 
-    <h3>"default"</h3>
+    <h4>"default"</h4>
     <ng2-slider
             min="0"
             max="150">
@@ -319,7 +319,7 @@ getElement(data){
         max="150">
 </ng2-slider>]]></show-code>
 
-    <h3>"simple-1"</h3>
+    <h4>"simple-1"</h4>
     <ng2-slider
             skin="simple-1"
             min="0"
@@ -332,7 +332,7 @@ getElement(data){
         max="150">
 </ng2-slider>]]></show-code>
 
-    <h3>"elegance-1"</h3>
+    <h4>"elegance-1"</h4>
     <ng2-slider
             skin="elegance-1"
             min="0"
@@ -345,7 +345,7 @@ getElement(data){
         max="150">
 </ng2-slider>]]></show-code>
 
-    <h3>"elegance-2"</h3>
+    <h4>"elegance-2"</h4>
     <ng2-slider
             skin="elegance-2"
             min="0"
@@ -358,7 +358,7 @@ getElement(data){
         max="150">
 </ng2-slider>]]></show-code>
 
-    <h3>"rear-sight"</h3>
+    <h4>"rear-sight"</h4>
     <ng2-slider
             skin="rear-sight"
             min="0"
