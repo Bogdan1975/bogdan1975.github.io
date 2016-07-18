@@ -1,7 +1,7 @@
 /**
  * Created by Bogdan1975 on 29.03.2016.
  */
-System.register(['angular2/core', "ng2-slider-component/ng2-slider.component", 'ng2-styled-directive/ng2-styled.directive', 'ng2-show-code/ng2-show-code.component', "ng2-tabs/src/ng2-tabs"], function(exports_1, context_1) {
+System.register(['@angular/core', "ng2-slider-component/ng2-slider.component", 'ng2-styled-directive/ng2-styled.directive', 'ng2-show-code/ng2-show-code.component', "ng2-tabs"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {

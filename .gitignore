@@ -1,5 +1,8 @@
 .idea
+/**/.idea/**/*/*
 # Created by .ignore support plugin (hsz.mobi)
 /tsconfig.json
 /typings
 /node_modules__
+node_modules/ng2-styled-directive/.idea/*.*
+node_modules/ng2-tabs/node_modules
