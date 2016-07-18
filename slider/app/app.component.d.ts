@@ -1,5 +1,6 @@
 export declare class AppComponent {
     config: Object;
+    showCodeSkinDirectory: string;
     constructor();
     onInit(): void;
     plainValueChanged(event: any, container: any): void;

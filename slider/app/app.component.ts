@@ -1,21 +1,28 @@
 /**
  * Created by Bogdan1975 on 29.03.2016.
  */
-import {Component, Directive, View, Inject, ElementRef, Query, Dependency, QueryList} from 'angular2/core';
 
-// import {Ng2SliderComponent} from "ng2-slider-component/ng2-slider.component.min";
+declare var __moduleName: string, module:any;
+
+import {Component} from '@angular/core';
+
 import {Ng2SliderComponent} from "ng2-slider-component/ng2-slider.component";
+import {Ng2StyledDirective} from 'ng2-styled-directive/ng2-styled.directive';
+import {Ng2ShowCodeComponent} from 'ng2-show-code/ng2-show-code.component';
 
-import {TAB_DIRECTIVES} from "ng2-tabs/src/ng2-tabs";
+import {TAB_DIRECTIVES} from "ng2-tabs";
 
 @Component({
     selector: 'app',
-    templateUrl: 'app/app.component.html',
-    directives: [Ng2SliderComponent, TAB_DIRECTIVES]
+    moduleId: __moduleName,
+    templateUrl: 'app.component.html',
+    directives: [Ng2SliderComponent, TAB_DIRECTIVES, Ng2ShowCodeComponent, Ng2StyledDirective]
 })
 export class AppComponent {
 
     config: Object;
+    
+    showCodeSkinDirectory = document.baseURI + '../node_modules/highlightjs/styles';
 
     constructor () {
     }

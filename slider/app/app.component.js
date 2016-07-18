@@ -1,4 +1,7 @@
-System.register(['angular2/core', "ng2-slider-component/ng2-slider.component", "ng2-tabs/src/ng2-tabs"], function(exports_1, context_1) {
+/**
+ * Created by Bogdan1975 on 29.03.2016.
+ */
+System.register(['@angular/core', "ng2-slider-component/ng2-slider.component", 'ng2-styled-directive/ng2-styled.directive', 'ng2-show-code/ng2-show-code.component', "ng2-tabs"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +13,7 @@ System.register(['angular2/core', "ng2-slider-component/ng2-slider.component", "
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, ng2_slider_component_1, ng2_tabs_1;
+    var core_1, ng2_slider_component_1, ng2_styled_directive_1, ng2_show_code_component_1, ng2_tabs_1;
     var AppComponent;
     return {
         setters:[
@@ -20,12 +23,19 @@ System.register(['angular2/core', "ng2-slider-component/ng2-slider.component", "
             function (ng2_slider_component_1_1) {
                 ng2_slider_component_1 = ng2_slider_component_1_1;
             },
+            function (ng2_styled_directive_1_1) {
+                ng2_styled_directive_1 = ng2_styled_directive_1_1;
+            },
+            function (ng2_show_code_component_1_1) {
+                ng2_show_code_component_1 = ng2_show_code_component_1_1;
+            },
             function (ng2_tabs_1_1) {
                 ng2_tabs_1 = ng2_tabs_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.showCodeSkinDirectory = document.baseURI + '../node_modules/highlightjs/styles';
                 }
                 AppComponent.prototype.onInit = function () {
                 };
@@ -51,9 +61,9 @@ System.register(['angular2/core', "ng2-slider-component/ng2-slider.component", "
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        //template: '<ng2-grid gridConfig=\'{"a":56}\'>Loading...</ng2-grid>',
-                        templateUrl: 'app/app.component.html',
-                        directives: [ng2_slider_component_1.Ng2SliderComponent, ng2_tabs_1.TAB_DIRECTIVES]
+                        moduleId: __moduleName,
+                        templateUrl: 'app.component.html',
+                        directives: [ng2_slider_component_1.Ng2SliderComponent, ng2_tabs_1.TAB_DIRECTIVES, ng2_show_code_component_1.Ng2ShowCodeComponent, ng2_styled_directive_1.Ng2StyledDirective]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
