@@ -38,8 +38,8 @@ export class AppComponent {
     rangeValueChanged(event, start:any, end:any) {
         var start_el = this.getElement(start);
         var end_el = this.getElement(end);
-        start_el.innerText = event.startValue;
-        end_el.innerText = event.endValue;
+        if (start_el instanceof Element) start_el.innerText = event.startValue;
+        if (end_el instanceof Element) end_el.innerText = event.endValue;
     }
 
     getElement(data){

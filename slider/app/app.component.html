@@ -5,10 +5,10 @@
     <ng2-slider min="1"
                 max="14"
                 value="5"
-                (onRangeChanged)="plainValueChanged($event, plain_1)">
+                (onRangeChanged)="plainValueChanged($event, 'plain_1')">
     </ng2-slider>
     <p class="value-box">
-        Value: <span class="value-span" #plain_1>5</span>
+        Value: <span class="value-span" id="plain_1">5</span>
     </p>
 
     <tabset>
@@ -16,10 +16,10 @@
             <show-code [skinDirectory]="showCodeSkinDirectory"><![CDATA[<ng2-slider min="1"
             max="14"
             value="5"
-            (onRangeChanged)="plainValueChanged($event, plain_1)">
+            (onRangeChanged)="plainValueChanged($event, 'plain_1')">
 </ng2-slider>]]>
 <p class="value-box">
-    Value: <span class="value-span" #plain_1>5</span>
+    Value: <span class="value-span" id="plain_1">5</span>
 </p></show-code>
         </tab>
         <tab title="TypeScript">
@@ -51,10 +51,10 @@ getElement(data){
             max="23"
             startValue="9"
             endValue="21"
-            (onRangeChanged)="rangeValueChanged($event, 'range-1-start', range_1_end)">
+            (onRangeChanged)="rangeValueChanged($event, 'range-1-start', 'range-1-end')">
     </ng2-slider>
     <p class="value-box">
-        Values: <span class="value-span" id="range-1-start">9</span> - <span class="value-span" #range_1_end>21</span>
+        Values: <span class="value-span" id="range-1-start">9</span> - <span class="value-span" id="range-1-end">21</span>
     </p>
 
     <tabset>
@@ -65,10 +65,10 @@ getElement(data){
         max="23"
         startValue="9"
         endValue="21"
-        (onRangeChanged)="rangeValueChanged($event, 'range-1-start', range_1_end)">
+        (onRangeChanged)="rangeValueChanged($event, 'range-1-start', 'range_1_end')">
 </ng2-slider>]]>
 <p class="value-box">
-    Values: <span class="value-span" id="range-1-start">9</span> - <span class="value-span" #range_1_end>21</span>
+    Values: <span class="value-span" id="range-1-start">9</span> - <span class="value-span" id="range-1-end">21</span>
 </p></show-code>
         </tab>
         <tab title="TypeScript">
@@ -100,10 +100,10 @@ getElement(data){
                 max="100"
                 value="25"
                 stepValue="5"
-                (onRangeChanged)="plainValueChanged($event, plain_2)">
+                (onRangeChanged)="plainValueChanged($event, 'plain_2')">
     </ng2-slider>
     <p class="value-box">
-        Value: <span class="value-span" #plain_2>25</span>
+        Value: <span class="value-span" id="plain_2">25</span>
     </p>
 
     <tabset>
@@ -113,10 +113,10 @@ getElement(data){
             max="100"
             value="25"
             stepValue="5"
-            (onRangeChanged)="plainValueChanged($event, plain_2)">
+            (onRangeChanged)="plainValueChanged($event, 'plain_2')">
 </ng2-slider>]]>
 <p class="value-box">
-    Value: <span class="value-span" #plain_2>25</span>
+    Value: <span class="value-span" id="plain_2">25</span>
 </p></show-code>
         </tab>
         <tab title="TypeScript">
@@ -172,10 +172,10 @@ getElement(data){
                     'height': '26px',
                     'background-color': 'red'
                 }"
-            (onRangeChanged)="rangeValueChanged($event, range_2_start, range_2_end)">
+            (onRangeChanged)="rangeValueChanged($event, 'range_2_start', 'range_2_end')">
     </ng2-slider>
     <p class="value-box">
-        Values: <span class="value-span" #range_2_start>0</span> - <span class="value-span" #range_2_end>150</span>
+        Values: <span class="value-span" id="range_2_start">0</span> - <span class="value-span" id="range_2_end">150</span>
     </p>
 
     <tabset>
@@ -207,10 +207,10 @@ getElement(data){
             'height': '26px',
             'background-color': 'red'
         }"
-        (onRangeChanged)="rangeValueChanged($event, range_2_start, range_2_end)">
+        (onRangeChanged)="rangeValueChanged($event, 'range_2_start', 'range_2_end')">
 </ng2-slider>]]>
 <p class="value-box">
-    Values: <span class="value-span" #range_2_start>0</span> - <span class="value-span" #range_2_end>150</span>
+    Values: <span class="value-span" id="range_2_start">0</span> - <span class="value-span" id="range_2_end">150</span>
 </p></show-code>
         </tab>
         <tab title="TypeScript">
@@ -253,10 +253,10 @@ getElement(data){
             max="150"
             startValue="0"
             endValue="150"
-            (onRangeChanged)="rangeValueChanged($event, range_3_start, range_3_end)">
+            (onRangeChanged)="rangeValueChanged($event, 'range_3_start', 'range_3_end')">
     </ng2-slider>
     <p class="value-box">
-        Values: <span class="value-span" #range_3_start>0</span> - <span class="value-span" #range_3_end>150</span>
+        Values: <span class="value-span" id="range_3_start">0</span> - <span class="value-span" id="range_3_end">150</span>
     </p>
 
     <tabset>
@@ -272,10 +272,10 @@ getElement(data){
         max="150"
         startValue="0"
         endValue="150"
-        (onRangeChanged)="rangeValueChanged($event, range_3_start, range_3_end)">
+        (onRangeChanged)="rangeValueChanged($event, 'range_3_start', 'range_3_end')">
 </ng2-slider>]]>
 <p class="value-box">
-    Values: <span class="value-span" #range_2_start>0</span> - <span class="value-span" #range_2_end>150</span>
+    Values: <span class="value-span" id="range_3_start">0</span> - <span class="value-span" id="range_3_end">150</span>
 </p></show-code>
         </tab>
         <tab title="TypeScript">

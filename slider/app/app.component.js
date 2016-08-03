@@ -46,8 +46,10 @@ System.register(['@angular/core', "ng2-slider-component/ng2-slider.component", '
                 AppComponent.prototype.rangeValueChanged = function (event, start, end) {
                     var start_el = this.getElement(start);
                     var end_el = this.getElement(end);
-                    start_el.innerText = event.startValue;
-                    end_el.innerText = event.endValue;
+                    if (start_el instanceof Element)
+                        start_el.innerText = event.startValue;
+                    if (end_el instanceof Element)
+                        end_el.innerText = event.endValue;
                 };
                 AppComponent.prototype.getElement = function (data) {
                     if (typeof (data) == 'string') {
